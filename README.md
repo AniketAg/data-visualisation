@@ -5,8 +5,6 @@ Graphics Fundamentals
 
 Data Visualisation
 
-Aniket Agarwal (17317437)
-
 To begin with this I first converted the two given xlsx files to the csv files and then implemented the following visualisations.
 
 1.	Nightingale’s Dataset: 
