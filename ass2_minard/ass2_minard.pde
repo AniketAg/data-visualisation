@@ -94,20 +94,20 @@ void draw()
     fill(#FFFFFF); 
     strokeWeight(2);
     stroke(#FFFFFF);
-    line(250, i * 6 * 5 + 650, width-180,i * 6 * 5 + 650);
+    line(250, i * 6 * 5 + 730, width-180,i * 6 * 5 + 730);
     strokeWeight(2);
     stroke(#0A090A);
     textAlign(RIGHT);
-    text(i*6, 250-10, i * 6 * 5 + 655);
+    text(i*6, 250-10, i * 6 * 5 + 735);
   }
   
-  text("TEMPERATURE (C)", 250-40, 2.5 * 6 * 5 + 655);
-  text("LONGITUDE", width/2+100, 6 * 6 * 5 + 655);
+  text("TEMPERATURE (C)", 250-40, 2.5 * 6 * 5 + 735);
+  text("LONGITUDE", width/2+100, 6 * 6 * 5 + 735);
   
   fill(#FFFFFF); 
   strokeWeight(2);
   stroke(#FFFFFF);
-  line(250+10, 650-10, 250 + 10,5 * 6 * 5 + 650+10);
+  line(250+10, 730-10, 250 + 10,5 * 6 * 5 + 730+10);
 
   for (int i = 1; i<temps.size(); i++) 
   {
@@ -115,9 +115,9 @@ void draw()
     Temp t = temps.get(i-1);
 
     float x1 = t.longt;    
-    float y1 = -t.temp * 5 + 650;
+    float y1 = -t.temp * 5 + 730;
     float x2 = t_1.longt;
-    float y2 = -t_1.temp * 5 + 650;  
+    float y2 = -t_1.temp * 5 + 730;  
 
     fill(#FFFFFF); 
     strokeWeight(2);
@@ -127,7 +127,7 @@ void draw()
     fill(#ecf0f1); 
     strokeWeight(2);    
     stroke(#8e44ad);
-    ellipse(normalize_x(t.longt), -t.temp * 5 + 650, 5, 5);
+    ellipse(normalize_x(t.longt), -t.temp * 5 + 730, 5, 5);
 
     // Draw Bubble
     fill(#ecf0f1, 220); 
@@ -135,17 +135,17 @@ void draw()
     stroke(#8e44ad);    
     String text = t.temp + "°C" ;    
     float textWidth = textWidth(text);
-    rect(normalize_x(t.longt) + 5, -t.temp * 5 + 650, textWidth+7, 17, 0, 3, 3, 3);
+    rect(normalize_x(t.longt) + 5, -t.temp * 5 + 730, textWidth+7, 17, 0, 3, 3, 3);
     fill(#0A090A); 
     textAlign(LEFT, CENTER);
-    text(text, normalize_x(t.longt) + 9, -t.temp * 5 + 650+6.5);
+    text(text, normalize_x(t.longt) + 9, -t.temp * 5 + 730+6.5);
    }    
    Temp t = temps.get(temps.size()-1);
    // Draw Point
    fill(#ecf0f1); 
    strokeWeight(2);    
    stroke(#8e44ad);
-   ellipse(normalize_x(t.longt), -t.temp * 5 + 650, 5, 5);
+   ellipse(normalize_x(t.longt), -t.temp * 5 + 730, 5, 5);
 
     // Draw Bubble
    fill(#ecf0f1, 220); 
@@ -153,10 +153,10 @@ void draw()
    stroke(#8e44ad);    
    String text = t.temp + "°C" ;    
    float textWidth = textWidth(text);
-   rect(normalize_x(t.longt) + 5, -t.temp * 5 + 650, textWidth+7, 17, 0, 3, 3, 3);
+   rect(normalize_x(t.longt) + 5, -t.temp * 5 + 730, textWidth+7, 17, 0, 3, 3, 3);
    fill(#0A090A); 
    textAlign(LEFT, CENTER);
-   text(text, normalize_x(t.longt) + 9, -t.temp * 5 + 650+6.5); 
+   text(text, normalize_x(t.longt) + 9, -t.temp * 5 + 730+6.5); 
     
     
    // Render the lines for the size of the survivors
